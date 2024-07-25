@@ -4,11 +4,13 @@ import java.util.ArrayList;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import com.example.model.WordTO;
 
+@Mapper
 public interface WmMapperInter {
 	// 단어 전체 리스트
 	@Select("select wId, category, wname, wmean, wtype from word order by wId")

@@ -2,14 +2,12 @@ package com.example.model;
 
 import java.util.ArrayList;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.example.config.WmMapperInter;
 
 @Repository
-@MapperScan(basePackages = { "com.example.controller", "com.example.config", "com.example.model" })
 public class WordDAO {
 
 	@Autowired

@@ -134,7 +134,7 @@ public class WMcontroller {
 		//단어삭제 버튼
 		if(delete != null) {
 			WordTO to = new WordTO();
-			to.setWId(request.getParameter("wId"));
+			to.setWId(request.getParameter(wId));
 			flag = wdao.wordDelete(to);
 		}
 		//전체삭제 버튼
@@ -157,9 +157,7 @@ public class WMcontroller {
 		WordTO to = new WordTO();
 		
 		String wId = request.getParameter("wId");
-		
-		System.out.println(wId);
-		
+			
 		to.setWId(wId);
 		
 		to.setWname(request.getParameter("mword"));
